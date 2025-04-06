@@ -1,0 +1,24 @@
+# config/config.yaml
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  train_file: "train.csv"
+  test_file: "test.csv"
+  test_labels_file: "test_labels.csv"
+
+model:
+  name: "bert-base-uncased"
+  num_labels: 6
+  max_len: 128
+  output_dir: "models"
+
+training:
+  epochs: 3
+  batch_size: 16
+  learning_rate: 2e-5
+  eval_strategy: "epoch"
+  save_strategy: "epoch"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
